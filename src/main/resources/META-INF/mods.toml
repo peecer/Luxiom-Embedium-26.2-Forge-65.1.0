@@ -1,0 +1,25 @@
+modLoader="javafml"
+loaderVersion="[65,)"
+license="All Rights Reserved"
+clientSideOnly=true
+
+[[mods]]
+modId="luxium"
+version="${version}"
+displayName="Luxium (UNIMPLEMENTED Port Bootstrap)"
+authors="Porting workspace maintained by peecer"
+description='''Development-only entrypoint. No original Luxium features have been ported. DO NOT DISTRIBUTE AS A MOD.'''
+
+[[mods]]
+modId="embeddium"
+version="${version}"
+displayName="Embeddium (UNIMPLEMENTED Port Bootstrap)"
+authors="Porting workspace maintained by peecer"
+description='''Development-only entrypoint. No original Embeddium features have been ported. DO NOT DISTRIBUTE AS A MOD.'''
+
+[[dependencies.luxium]]
+modId="embeddium"
+mandatory=true
+versionRange="[0,)"
+ordering="AFTER"
+side="CLIENT"
