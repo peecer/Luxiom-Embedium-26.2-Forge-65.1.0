@@ -25,12 +25,9 @@ jobs:
           set -euo pipefail
           mkdir -p dev-builds
           count=0
-          for file in build/libs/*-unimplemented-*.jar; do
+          for file in build/libs/*0.0.0-dev.jar; do
             [[ -f "$file" ]] || continue
-            case "$file" in
-              *-dev.jar|*-sources.jar|*-sources-dev.jar) continue ;;
-            esac
-            cp "$file" "dev-builds/"
+            cp "$file" "dev-builds/UNIMPLEMENTED-${file##*/}"
             count=$((count+1))
           done
           [[ "$count" -eq 1 ]] || { echo "Expected 1 stub JARs but found $count"; exit 1; }
